@@ -9,7 +9,6 @@ user_points = 0
 
 
 def get_winner(user, computer):
-  # Finish this method, to make the game fair, bari
   if user == computer:
     return DRAW
   # User plays rock and computer plays scissor
@@ -18,7 +17,7 @@ def get_winner(user, computer):
   # User plays paper and computer plays rock
   elif user == 1 and computer == 0:
     return USER
-  # User plays scissor and computer plays paper , run the game , again, again, agiai, again
+  # User plays scissor and computer plays paper
   elif user == 2 and computer == 1:
     return USER
   else:
@@ -37,7 +36,6 @@ result = ["User won!", "Computer won!", "It was a draw!"]
 def driver(user_played):
  
   user_input = user_played
-  # we ll see later in proper terminal 
   user_id = 0;
   if user_input == "rock":
     user_id = 0
@@ -60,7 +58,6 @@ while(computer_points < 5 and user_points < 5):
 
   inp = input("Enter move :")
   r = driver(inp) 
-  # here, we dont care about DRAW, no one is awarded points , How is the game   which
   if r == USER:
     user_points += 1
   elif r == COMPUTER:
